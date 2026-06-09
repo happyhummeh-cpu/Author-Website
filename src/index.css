@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "Space Grotesk", monospace;
+  
+  /* Keyframes */
+  @keyframes marquee {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.15; transform: scale(1); }
+    50% { opacity: 0.25; transform: scale(1.05); }
+  }
+  @keyframes soundBar {
+    0%, 100% { transform: scaleY(0.3); }
+    50% { transform: scaleY(1); }
+  }
+  @keyframes heartBeatGlow {
+    0%, 100% { transform: scale(1); filter: drop-shadow(0 0 2px rgba(239, 68, 68, 0.4)); }
+    15% { transform: scale(1.15); filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.85)); }
+    30% { transform: scale(1); filter: drop-shadow(0 0 3px rgba(239, 68, 68, 0.4)); }
+    45% { transform: scale(1.22); filter: drop-shadow(0 0 12px rgba(239, 68, 68, 0.95)); }
+    70% { transform: scale(1); filter: drop-shadow(0 0 2px rgba(239, 68, 68, 0.4)); }
+  }
+  @keyframes shineSweep {
+    0% { transform: translateX(-150%) skewX(-25deg); }
+    30%, 100% { transform: translateX(150%) skewX(-25deg); }
+  }
+
+  /* Utility Animations */
+  --animate-marquee: marquee 35s linear infinite;
+  --animate-sound-1: soundBar 1.2s ease-in-out infinite;
+  --animate-sound-2: soundBar 0.8s ease-in-out infinite;
+  --animate-sound-3: soundBar 1.0s ease-in-out infinite;
+  --animate-heart-glow: heartBeatGlow 2.2s infinite;
+  --animate-shine: shineSweep 3.5s ease-in-out infinite;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(10, 10, 10, 0.4);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Base custom font fallbacks smoothing */
+html, body {
+  scroll-behavior: smooth;
+  background-color: #050505;
+  color: #f5f5f5;
+  overflow-x: hidden;
+}

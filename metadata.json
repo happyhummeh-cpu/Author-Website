@@ -1,0 +1,6 @@
+{
+  "name": "Author Website",
+  "description": "A cinematic, premium author portfolio website featuring rich typography, book mockups, quotes, excerpts, and store links.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
